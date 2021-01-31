@@ -1,0 +1,16 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$iggly-color: lightpink;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.iggly {
+  color: $iggly-color;
+}
+
+.jiggly {
+  color: darken($iggly-color, 10);
+}
