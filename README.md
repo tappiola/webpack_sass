@@ -4,6 +4,11 @@ Create `src/index.js` with any ES6+ code.
 
 ## Install babel
 
+Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. Here are the main things Babel can do for you:
+
+- Transform syntax
+- Polyfill features that are missing in your target environment (through a third-party polyfill such as core-js)
+
 Run `npm install --save-dev @babel/core @babel/cli @babel/preset-env`
 
 Add babel config: `babel.config.json`
@@ -11,6 +16,8 @@ Add babel config: `babel.config.json`
 Check it by running `npx babel src/ --out-dir lib`
 
 ## Install webpack
+
+Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser.
 
 Run `npm install webpack webpack-cli --save-dev`
 
@@ -52,7 +59,7 @@ Run: `npm install --save-dev html-webpack-plugin`
 
 - Run `npm install --save react react-dom`
 - Run `npm install --save-dev react @babel/react`
-- add @babel/react to babel config presets
+- add `@babel/react` to babel config presets
 
 ## React lazy loading
 
