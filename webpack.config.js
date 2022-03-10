@@ -12,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
 
   },
+  // code obfuscation (i.e. replace with shorter variable names)
   // optimization: {
   //   minimize: false
   // },
@@ -20,17 +21,22 @@ module.exports = {
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
+        // produce old browsers-compatible JavaScript from ES5
         use: ['babel-loader']
       },
       {
         test: /\.(scss|css)$/,
+        //  css-loader: css to a string
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ]
   },
   plugins: [
+    // cleans dist folder before build
     new CleanWebpackPlugin(),
+    // extracts CSS into separate files. It creates a CSS file per JS file which contains CSS.
     new MiniCssExtractPlugin(),
+    // injects JS and CSS bundles into HTML template file.
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
